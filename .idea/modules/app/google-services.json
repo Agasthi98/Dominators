@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1035153752578",
+    "firebase_url": "https://dominators-mad-project-8f3da.firebaseio.com",
+    "project_id": "dominators-mad-project-8f3da",
+    "storage_bucket": "dominators-mad-project-8f3da.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1035153752578:android:fd0142189c345c74a71d1b",
+        "android_client_info": {
+          "package_name": "com.example.dominatorsmad_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1035153752578-ajhqbqqp8hh9g15tni1rnr86mbh9bft9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dominatorsmad_project",
+            "certificate_hash": "937a0633d66e23ab5df6d9b9b31e478eac80456e"
+          }
+        },
+        {
+          "client_id": "1035153752578-e1ml7ei58ee4pc40lmjct3jn8a5s9cbo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_b9pF_vjaDkQUOzBUGqWIwyObEbRmqQo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1035153752578-e1ml7ei58ee4pc40lmjct3jn8a5s9cbo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
