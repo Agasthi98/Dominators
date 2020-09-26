@@ -9,12 +9,24 @@
             <item
                 android:id="@+id/nav_admin_account"
                 android:title="Admin Account"
+<<<<<<< HEAD
+                android:icon="@drawable/ic_user_account"/>
+            <item
+                android:id="@+id/nav_admin_cake"
+                android:title="Add new Cake"
+                android:icon="@drawable/ic_update_user"/>
+            <item
+                android:id="@+id/nav_add_cake"
+                android:title="Add Cake To Sell"
+                android:icon="@drawable/ic_add_product"/>
+=======
                 android:icon="@drawable/ic_admin_account"/>
             <item
                 android:id="@+id/nav_admin_cake"
                 android:title="Add new Cake"
                 android:icon="@drawable/ic_add_cake"/>
 
+>>>>>>> origin/master
             <item
                 android:id="@+id/nav_settings"
                 android:title="Settings"
@@ -31,7 +43,14 @@
                 android:id="@+id/instagram"
                 android:title="Instagram"
                 android:icon="@drawable/ic_instagram"/>
+<<<<<<< HEAD
+            <item
+                android:id="@+id/twitter"
+                android:title="Twitter"
+                android:icon="@drawable/ic_twitter"/>
+=======
 
+>>>>>>> origin/master
         </menu>
     </item>
 </menu>
