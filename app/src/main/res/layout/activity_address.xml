@@ -11,7 +11,7 @@
         android:layout_width="309dp"
         android:layout_height="53dp"
         android:background="@drawable/button_background"
-        android:text="@string/SaveAddressBtn"
+        android:text="Continue"
         android:textColor="@color/colorWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -68,9 +68,9 @@ public class CakePage extends Fragment {
                 int itemQuantity = 1;
                 int totalPrice = Integer.parseInt(itemPrice);
 
-                Cart newCartItem = new Cart(itemId, itemName, itemPrice, itemImage,itemDescription, itemQuantity, totalPrice);
-                cartReference.child(itemId).setValue(newCartItem);
-                Toast.makeText(getContext(), "Item Added to Cart", Toast.LENGTH_SHORT).show();
+//                Cart newCartItem = new Cart(itemId, itemName, itemPrice, itemImage,itemDescription, itemQuantity, totalPrice);
+//                cartReference.child(itemId).setValue(newCartItem);
+//                Toast.makeText(getContext(), "Item Added to Cart", Toast.LENGTH_SHORT).show();
             }
         });
     }

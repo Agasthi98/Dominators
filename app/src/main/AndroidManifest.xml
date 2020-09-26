@@ -14,7 +14,17 @@
         <activity android:name=".payment_confirm" />
         <activity android:name=".editAddress" />
         <activity android:name=".purchaseSuccess" />
-        <activity android:name=".cake_pages" >
+
+
+        <activity android:name=".UserHome"/>
+        <activity android:name=".UserRegistration" />
+        <activity android:name=".AdminRegister" />
+        <activity android:name=".AdminHome" />
+
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".UserLogin"/>
+            <activity android:name=".cake_pages" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

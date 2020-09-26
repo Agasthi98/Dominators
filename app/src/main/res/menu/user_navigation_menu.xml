@@ -34,7 +34,7 @@
             <item
                 android:id="@+id/twitter"
                 android:title="Twitter"
-                android:icon="@drawable/ic_twitter"/>
+                android:icon="@drawable/button_add_now"/>
         </menu>
     </item>
 </menu>
