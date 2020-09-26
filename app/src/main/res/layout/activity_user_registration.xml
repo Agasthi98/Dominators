@@ -22,14 +22,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Register As Admin"
+                android:text="Register With US"
                 android:textColor="@color/textColorWhite"
                 android:textSize="32dp"
                 android:layout_marginBottom="50dp"
                 android:textStyle="bold" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/admin_register_name"
+                android:id="@+id/user_register_name"
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
@@ -45,7 +45,7 @@
                 android:drawableLeft="@drawable/ic_person" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/admin_register_email"
+                android:id="@+id/user_register_email"
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -60,24 +60,10 @@
                 android:maxLines="1"
                 android:padding="15dp" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/admin_shop_name"
-                android:layout_width="320dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginBottom="7dp"
-                android:background="@drawable/custom_input"
-                android:drawableStart="@drawable/ic_cart"
-                android:drawablePadding="12dp"
-                android:hint="Enter shop name"
-                android:inputType="text"
-                android:maxLines="1"
-                android:padding="15dp"
-                android:drawableLeft="@drawable/ic_cart" />
+
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/admin_register_pNumber"
+                android:id="@+id/user_register_pNumber"
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
@@ -86,14 +72,14 @@
                 android:background="@drawable/custom_input"
                 android:drawableStart="@drawable/ic_phone"
                 android:drawablePadding="12dp"
-                android:hint="Your phone number"
+                android:hint="Contact number"
                 android:inputType="number"
                 android:maxLines="1"
                 android:padding="15dp"
                 android:drawableLeft="@drawable/ic_phone" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/admin_register_password"
+                android:id="@+id/user_register_password"
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
@@ -109,7 +95,7 @@
                 android:drawableLeft="@drawable/ic_password" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/admin_register_conformPassword"
+                android:id="@+id/user_register_conformPassword"
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
@@ -125,24 +111,24 @@
                 android:drawableLeft="@drawable/ic_conform_password" />
 
             <Button
-                android:id="@+id/admin_register_button"
-                android:layout_width="150dp"
+                android:id="@+id/user_register_button"
+                android:layout_width="250dp"
                 android:layout_height="50dp"
                 android:width="45dp"
                 android:background="@drawable/button_background"
                 android:padding="15dp"
                 android:layout_marginTop="30dp"
-                android:text="register"
+                android:text="Create Account"
                 android:textSize="15dp" />
 
             <TextView
-                android:id="@+id/admin_register_to_login"
+                android:id="@+id/user_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:textColor="@color/textColorWhite"
                 android:layout_marginTop="10dp"
-                android:text="Cancel" />
+                android:text="Login" />
 
         </LinearLayout>
     </ScrollView>

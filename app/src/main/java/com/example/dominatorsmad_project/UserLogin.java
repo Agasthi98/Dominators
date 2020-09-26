@@ -18,21 +18,20 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class MainActivity extends AppCompatActivity {
-
+public class UserLogin extends AppCompatActivity {
     private TextView createNewUserAccount;
-    private TextView loginAdmin;
-    private EditText loginEmail;
-    private EditText loginPassword;
-    private Button loginButton;
+    private EditText userLoginEmail;
+    private EditText userLoginPassword;
+    private Button userLoginButton;
     private ProgressDialog dialog;
+    private TextView adminlogin;
 
     private FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_user_login);
         dialog = new ProgressDialog(this);
         auth = FirebaseAuth.getInstance();
 
@@ -46,23 +45,23 @@ public class MainActivity extends AppCompatActivity {
 
     private void login() {
         createNewUserAccount = findViewById(R.id.create_new_account);
-        loginEmail = findViewById(R.id.login_email);
-        loginPassword = findViewById(R.id.login_password);
-        loginButton = findViewById(R.id.login_button);
-        loginAdmin = findViewById(R.id.login_as_admin);
+        userLoginEmail = findViewById(R.id.user_login_email);
+        userLoginPassword = findViewById(R.id.user_login_password);
+        userLoginButton = findViewById(R.id.user_login_button);
+        adminlogin = findViewById(R.id.login_as_admin);
 
-        loginButton.setOnClickListener(new View.OnClickListener() {
+        userLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String email = loginEmail.getText().toString().trim();
-                String password = loginPassword.getText().toString().trim();
+                String email = userLoginEmail.getText().toString().trim();
+                String password = userLoginPassword.getText().toString().trim();
 
                 if (TextUtils.isEmpty(email)) {
-                    loginEmail.setError("Email is required");
+                    userLoginEmail.setError("Email is required");
                     return;
                 }
                 if (TextUtils.isEmpty(password)) {
-                    loginPassword.setError("Password is required");
+                    userLoginPassword.setError("Password is required");
                     return;
                 }
 
@@ -75,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             dialog.dismiss();
                             Toast.makeText(getApplicationContext(), "Login Success", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(), AdminHome.class));
+                            startActivity(new Intent(getApplicationContext(), UserHome.class));
                         } else {
                             dialog.dismiss();
                             Toast.makeText(getApplicationContext(), "Login Failed", Toast.LENGTH_SHORT).show();
@@ -90,6 +89,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), UserRegistration.class));
+            }
+        });
+        adminlogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
             }
         });
     }

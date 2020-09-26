@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/admin_drawer_layout"
+    android:id="@+id/user_drawer_layout"
     android:fitsSystemWindows="true"
     tools:openDrawer="start"
     tools:context=".AdminHome">
@@ -14,12 +14,12 @@
         android:layout_height="match_parent"/>
 
     <com.google.android.material.navigation.NavigationView
-        android:id="@+id/admin_navigation_view"
+        android:id="@+id/user_navigation_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        app:menu="@menu/admin_navigation_menu"
+        app:menu="@menu/user_navigation_menu"
         app:itemTextAppearance="?android:textAppearanceMedium"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>

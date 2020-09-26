@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -26,11 +27,12 @@ public class HomePage extends Fragment {
 
     private FirebaseRecyclerOptions<Cake> options;
     private FirebaseRecyclerAdapter<Cake, CakeViewHolder> adapter;
+    private CakePage cakePage;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home_page, container, false);
-
+        cakePage = new CakePage();
         homePageRecyclerView = view.findViewById(R.id.home_page_recycler_view);
         homePageRecyclerView.setHasFixedSize(true);
         homePageRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -38,12 +40,34 @@ public class HomePage extends Fragment {
         options = new FirebaseRecyclerOptions.Builder<Cake>().setQuery(reference, Cake.class).build();
         adapter = new FirebaseRecyclerAdapter<Cake, CakeViewHolder>(options) {
             @Override
-            protected void onBindViewHolder(@NonNull CakeViewHolder holder, int position, @NonNull Cake model) {
+            protected void onBindViewHolder(@NonNull CakeViewHolder holder, int position, @NonNull final Cake model) {
                 holder.cakeName.setText(model.getName());
                 holder.cakePrice.setText(model.getCakePrice());
                 holder.cakeQuantity.setText(model.getCakeQuantity());
+                holder.cakeDescription.setText(model.getCakeDescription());
                 Picasso.get().load(model.getImgUri()).into(holder.cakeImage);
+
+                holder.itemCard.setOnClickListener(new View.OnClickListener(){
+
+                    @Override
+                    public void onClick(View view) {
+                        Bundle bundle = new Bundle();
+                        bundle.putString("cakeImage", model.getImgUri());
+                        bundle.putString("cakeName", model.getName());
+                        bundle.putString("cakePrice", model.getCakePrice());
+                        bundle.putString("cakeQuantity", model.getCakeQuantity());
+                        bundle.putString("cakeDescription", model.getCakeDescription());
+                        cakePage.setArguments(bundle);
+
+                        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                        transaction.replace(R.id.main_frame, cakePage);
+                        transaction.addToBackStack(null);
+                        transaction.commit();
+                    }
+                });
             }
+
+
 
             @NonNull
             @Override
