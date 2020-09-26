@@ -43,75 +43,75 @@ public class cake_pages extends AppCompatActivity {
         Next = findViewById(R.id.add_to_cart_button);
 
 
-        databaseReference = FirebaseDatabase.getInstance().getReference().child("Address").child("User2");
-        databaseReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
-                try{
-
-                    Name = dataSnapshot.child("names").getValue().toString();
-                }
-                catch (Exception e1){
-
-                    Name="Empty";
-                }
-
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                CardNo="Empty";
-            }
-        });
-
-        databaseReference1 = FirebaseDatabase.getInstance().getReference().child("Payment").child("User1");
-        databaseReference1.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
-                try {
-                    CardNo = dataSnapshot.child("cardNo").getValue().toString();
-                }
-                catch (Exception e ){
-                    CardNo="Empty";
-                }
-
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                CardNo="Empty";
-            }
-        });
+//        databaseReference = FirebaseDatabase.getInstance().getReference().child("Address").child("User2");
+//        databaseReference.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//
+//                try{
+//
+//                    Name = dataSnapshot.child("names").getValue().toString();
+//                }
+//                catch (Exception e1){
+//
+//                    Name="Empty";
+//                }
+//
+//            }
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError databaseError) {
+//                CardNo="Empty";
+//            }
+//        });
+//
+//        databaseReference1 = FirebaseDatabase.getInstance().getReference().child("Payment").child("User1");
+//        databaseReference1.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//
+//                try {
+//                    CardNo = dataSnapshot.child("cardNo").getValue().toString();
+//                }
+//                catch (Exception e ){
+//                    CardNo="Empty";
+//                }
+//
+//            }
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError databaseError) {
+//                CardNo="Empty";
+//            }
+//        });
 
 
         Next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                if (Name.equals("Empty")){
+//                if (Name.equals("Empty")){
 
                     Toast.makeText(getApplicationContext(), "Address page", Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(getApplicationContext(), Address.class);
                     startActivity(i);
-
-                }
-                else{
-                    if (CardNo.equals("Empty")){
-                        Toast.makeText(getApplicationContext(), "Payment page", Toast.LENGTH_SHORT).show();
-                        Intent i = new Intent(getApplicationContext(), Payment.class);
-                        startActivity(i);
-                    }
-                    else{
-                        Toast.makeText(getApplicationContext(), "Confirm page", Toast.LENGTH_SHORT).show();
-                        Intent i = new Intent(getApplicationContext(), payment_confirm.class);
-                        i.putExtra("CardNo",CardNo);
-                        startActivity(i);
-
-                    }
-                }
-
-
-
+//
+//                }
+//                else{
+//                    if (CardNo.equals("Empty")){
+//                        Toast.makeText(getApplicationContext(), "Payment page", Toast.LENGTH_SHORT).show();
+//                        Intent i = new Intent(getApplicationContext(), Payment.class);
+//                        startActivity(i);
+//                    }
+//                    else{
+//                        Toast.makeText(getApplicationContext(), "Confirm page", Toast.LENGTH_SHORT).show();
+//                        Intent i = new Intent(getApplicationContext(), payment_confirm.class);
+//                        i.putExtra("CardNo",CardNo);
+//                        startActivity(i);
+//
+//                    }
+//                }
+//
+//
+//
             }
 
 
