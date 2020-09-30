@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "519405507606",
-    "firebase_url": "https://dominators-mad-project-d6a5a.firebaseio.com",
-    "project_id": "dominators-mad-project-d6a5a",
-    "storage_bucket": "dominators-mad-project-d6a5a.appspot.com"
+    "project_number": "653232990627",
+    "firebase_url": "https://dominators-mad-project-3daa7.firebaseio.com",
+    "project_id": "dominators-mad-project-3daa7",
+    "storage_bucket": "dominators-mad-project-3daa7.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:519405507606:android:549a5f16328db159a0d137",
+        "mobilesdk_app_id": "1:653232990627:android:ca3bf192be35555d13d216",
         "android_client_info": {
           "package_name": "com.example.dominatorsmad_project"
         }
       },
       "oauth_client": [
         {
-          "client_id": "519405507606-4rft32p8pl03qjmirobnv85ogg6vg8qe.apps.googleusercontent.com",
+          "client_id": "653232990627-3iko7s5rg6omifiqr48n6icls6jsuq66.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyA_T7ftR946ou_04HaRbloAMnNfnTq9hU0"
+          "current_key": "AIzaSyDA29ySYx-rOsjWoEohPy9WX9rHPkYsg58"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "519405507606-4rft32p8pl03qjmirobnv85ogg6vg8qe.apps.googleusercontent.com",
+              "client_id": "653232990627-3iko7s5rg6omifiqr48n6icls6jsuq66.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -76,7 +76,7 @@
                 android:inputType="number"
                 android:maxLines="1"
                 android:padding="15dp"
-                android:drawableLeft="@drawable/ic_phone" />
+                android:drawableLeft="@drawable/ic_add" />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/user_register_password"
