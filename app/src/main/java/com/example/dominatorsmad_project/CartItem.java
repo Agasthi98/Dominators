@@ -49,7 +49,7 @@ public class CartItem extends Fragment {
         View view = inflater.inflate(R.layout.fragment_cart, container, false);
         auth = FirebaseAuth.getInstance();
         cartItem = new CartItem();
-        cartTotalPrice = view.findViewById(R.id.cart_total_price);
+        cartTotalPrice = view.findViewById(R.id.cart_tot_price);
         cartRecycleView = view.findViewById(R.id.cart_recycle_view);
         cartRecycleView.setHasFixedSize(true);
         cartRecycleView.setLayoutManager(new LinearLayoutManager(getContext()));
