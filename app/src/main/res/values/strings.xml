@@ -1,8 +1,7 @@
 <resources>
     <string name="app_name">Cake</string>
     <string name="PaymentHeader">Payment</string>
-    <string name="Save_Card">Save this card</string>
-    <string name="SaveCard_swtich" />
+    <string name="Save_Card">Automatically Save this card</string>
     <string name="CardNumber">Card number</string>
     <string name="CardMonth">MM</string>
     <string name="CardYear">YY</string>
@@ -40,15 +39,12 @@
     <string name="deletepaymentcardmessage">Are you sure want to delete this card</string>
     <string name="order_n">order_n</string>
     <string name="Deliver">Delivery Address</string>
-    <string name="marwa_eltayeb">marwa_eltayeb</string>
     <string name="user_address">user_address</string>
-    <string name="dummy_phone">dummy_phone</string>
     <string name="items_in_your_order">items_in_your_order</string>
     <string name="product_image">product_image</string>
-    <string name="samsung_galaxy_a70">samsung_galaxy_a70</string>
     <string name="item">item</string>
-    <string name="reorder">Place</string>
+    <string name="order">Place</string>
     <string name="status_bar">status_bar</string>
-    <string name="_5399_egp">_5399_egp</string>
+
 
 </resources>
