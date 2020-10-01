@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Address">
+
+    <Button
+        android:id="@+id/btnupdateAddress"
+        android:layout_width="309dp"
+        android:layout_height="53dp"
+        android:background="@drawable/button_background"
+        android:text="Continue"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEditCity"
+        app:layout_constraintVertical_bias="0.827" />
+
+
+    android:id="@+id/txtcont2"
+
+    <TextView
+        android:id="@+id/txtcars"
+        android:layout_width="378dp"
+        android:layout_height="44dp"
+        android:text="@string/AddressHeader"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.424"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.133" />
+
+    <EditText
+        android:id="@+id/txtEditname"
+        android:layout_width="390dp"
+        android:layout_height="50dp"
+        android:hint="Name"
+        android:paddingLeft="@dimen/dimen35sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.287"
+        tools:hint="@string/Name" />
+
+    <EditText
+        android:id="@+id/txtcont2"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:hint="Street"
+        android:text="@string/Conatctextention"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txtEditname"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtEditname"
+        app:layout_constraintTop_toBottomOf="@+id/txtEditname"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/txteditStreet"
+        android:layout_width="390dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:hint="Strret"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txtEditCont"
+        app:layout_constraintTop_toBottomOf="@+id/txtEditCont"
+        app:layout_constraintVertical_bias="0.0"
+        tools:hint="@string/Street" />
+
+    <EditText
+        android:id="@+id/txteditStreet2"
+        android:layout_width="390dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:hint="Street"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txteditStreet"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txteditStreet"
+        app:layout_constraintTop_toBottomOf="@+id/txteditStreet"
+        app:layout_constraintVertical_bias="0.0"
+        tools:hint="@string/Street2" />
+
+    <EditText
+        android:id="@+id/txtEditCity"
+        android:layout_width="390dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:hint="City"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txteditStreet2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txteditStreet2"
+        app:layout_constraintVertical_bias="0.0"
+        tools:hint="@string/City" />
+
+    <EditText
+        android:id="@+id/txtEditCont"
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:hint="Contact Number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txtEditname"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/txtcont2"
+        app:layout_constraintTop_toBottomOf="@+id/txtEditname"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="47dp"
+        android:layout_height="44dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtEditname"
+        app:layout_constraintEnd_toEndOf="@+id/txtEditname"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtEditname"
+        app:layout_constraintTop_toTopOf="@+id/txtEditname"
+        app:layout_constraintVertical_bias="0.473"
+        app:srcCompat="@mipmap/ic_location_foreground" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

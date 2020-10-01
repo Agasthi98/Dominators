@@ -5,6 +5,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class CakeViewHolder extends RecyclerView.ViewHolder {
@@ -13,6 +14,8 @@ public class CakeViewHolder extends RecyclerView.ViewHolder {
     public TextView cakeName;
     public TextView cakePrice;
     public TextView cakeQuantity;
+    public TextView cakeDescription;
+    public CardView itemCard;
 
     public CakeViewHolder(@NonNull View itemView) {
         super(itemView);
@@ -20,6 +23,8 @@ public class CakeViewHolder extends RecyclerView.ViewHolder {
         cakeName = itemView.findViewById(R.id.display_cake_name);
         cakeQuantity = itemView.findViewById(R.id.display_cake_quantity);
         cakePrice = itemView.findViewById(R.id.display_cake_price);
+        itemCard = itemView.findViewById(R.id.item_card);
+        cakeDescription = itemView.findViewById(R.id.display_Description);
 
     }
 }

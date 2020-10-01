@@ -9,11 +9,9 @@
     tools:openDrawer="start"
     tools:context=".AdminHome">
 
-    <include
-        android:id="@+id/admin_navigation_view"
-        layout="@layout/appbar_layout"
+    <include layout="@layout/appbar_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"/>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/admin_navigation_view"

@@ -7,9 +7,7 @@ public class Cake {
     private String cakeQuantity;
     private String cakePrice;
     private String imgUri;
-    private String adminName;
-    private String adminEmail;
-    private String adminContactNo;
+
 
     public Cake() {}
 

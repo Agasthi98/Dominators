@@ -9,11 +9,15 @@
             <item
                 android:id="@+id/nav_admin_account"
                 android:title="Admin Account"
+
+                android:icon="@drawable/ic_user_account"/>
+
                 android:icon="@drawable/ic_admin_account"/>
             <item
                 android:id="@+id/nav_admin_cake"
                 android:title="Add new Cake"
                 android:icon="@drawable/ic_add_cake"/>
+
 
             <item
                 android:id="@+id/nav_settings"
@@ -31,6 +35,11 @@
                 android:id="@+id/instagram"
                 android:title="Instagram"
                 android:icon="@drawable/ic_instagram"/>
+
+            <item
+                android:id="@+id/twitter"
+                android:title="Twitter"
+                android:icon="@drawable/button_add_to_cart"/>
 
         </menu>
     </item>

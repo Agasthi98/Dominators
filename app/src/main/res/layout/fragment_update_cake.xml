@@ -32,7 +32,7 @@
                 android:layout_margin="10dp"
                 android:hint="Cake name"
                 android:drawablePadding="12dp"
-                android:background="@drawable/input_button"
+                android:background="@drawable/inputButton"
                 android:inputType="text"
                 android:maxLines="1"
                 android:padding="15dp" />
