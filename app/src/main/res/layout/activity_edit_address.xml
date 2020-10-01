@@ -30,10 +30,10 @@
         android:textColor="@color/colorWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.392"
+        app:layout_constraintHorizontal_bias="0.411"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtEditCity"
-        app:layout_constraintVertical_bias="0.823" />
+        app:layout_constraintVertical_bias="0.773" />
 
     <TextView
         android:id="@+id/textView15"
@@ -83,10 +83,10 @@
         android:text="@string/Conatctextention"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/txtEditname"
-        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtEditname"
-        app:layout_constraintVertical_bias="0.01" />
+        app:layout_constraintVertical_bias="0.014" />
 
     <EditText
         android:id="@+id/txteditStreet"
@@ -131,15 +131,15 @@
 
     <EditText
         android:id="@+id/txtEditCont"
-        android:layout_width="289dp"
-        android:layout_height="51dp"
+        android:layout_width="285dp"
+        android:layout_height="47dp"
         android:layout_marginTop="16dp"
         android:hint="Contact Number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/txtEditname"
-        app:layout_constraintHorizontal_bias="0.928"
+        app:layout_constraintHorizontal_bias="0.933"
         app:layout_constraintStart_toStartOf="@+id/txtEditname"
         app:layout_constraintTop_toBottomOf="@+id/txtEditname"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.011" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
