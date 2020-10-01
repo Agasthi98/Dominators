@@ -11,7 +11,8 @@
     <string name="CardHeader">Add a credit/debit card</string>
     <string name="paymentSave">Done</string>
     <string name="AddressHeader">Please enter your address in English character as required</string>
-    <string name="SaveAddress">Save delivery address</string>
+    <string name="EditAddressHeader">Please enter your new address in English character as required</string>
+    <string name="SaveAddress">Save delivery address automatically save</string>
     <string name="SaveAddressBtn">Continue</string>
     <string name="Name">Customer Name</string>
     <string name="Conatctextention">+94</string>

@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    tools:context=".MainActivity">
+    android:gravity="center">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -32,7 +31,7 @@
                 android:layout_margin="10dp"
                 android:hint="Cake name"
                 android:drawablePadding="12dp"
-                android:background="@drawable/inputButton"
+                android:background="@drawable/input_button"
                 android:inputType="text"
                 android:maxLines="1"
                 android:padding="15dp" />
@@ -45,7 +44,7 @@
                 android:hint="Description"
                 android:drawablePadding="12dp"
                 android:padding="15dp"
-                android:background="@drawable/inputButton"
+                android:background="@drawable/input_button"
                 />
 
             <com.google.android.material.textfield.TextInputEditText
@@ -55,7 +54,7 @@
                 android:layout_margin="10dp"
                 android:hint="Cake price"
                 android:drawablePadding="12dp"
-                android:background="@drawable/inputButton"
+                android:background="@drawable/input_button"
                 android:inputType="number"
                 android:maxLines="1"
                 android:padding="15dp" />
@@ -68,7 +67,7 @@
                 android:hint="Quantity"
                 android:inputType="number"
                 android:drawablePadding="12dp"
-                android:background="@drawable/inputButton"
+                android:background="@drawable/input_button"
                 android:maxLines="1"
                 android:padding="15dp" />
 
