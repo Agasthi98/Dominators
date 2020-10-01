@@ -32,7 +32,7 @@
                 android:layout_margin="10dp"
                 android:hint="Cake name"
                 android:drawablePadding="12dp"
-                android:background="@drawable/custom_input"
+                android:background="@drawable/inputButton"
                 android:inputType="text"
                 android:maxLines="1"
                 android:padding="15dp" />
@@ -45,7 +45,7 @@
                 android:hint="Description"
                 android:drawablePadding="12dp"
                 android:padding="15dp"
-                android:background="@drawable/custom_input"
+                android:background="@drawable/inputButton"
                 />
 
             <com.google.android.material.textfield.TextInputEditText
@@ -55,7 +55,7 @@
                 android:layout_margin="10dp"
                 android:hint="Cake price"
                 android:drawablePadding="12dp"
-                android:background="@drawable/custom_input"
+                android:background="@drawable/inputButton"
                 android:inputType="number"
                 android:maxLines="1"
                 android:padding="15dp" />
@@ -68,7 +68,7 @@
                 android:hint="Quantity"
                 android:inputType="number"
                 android:drawablePadding="12dp"
-                android:background="@drawable/custom_input"
+                android:background="@drawable/inputButton"
                 android:maxLines="1"
                 android:padding="15dp" />
 
@@ -90,11 +90,10 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:width="45dp"
-                android:background="@drawable/delete_button"
+                android:background="@drawable/button_delete_background"
                 android:padding="15dp"
                 android:text="delete cake"
                 android:textSize="18dp" />
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

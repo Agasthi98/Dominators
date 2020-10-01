@@ -1,39 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.dominatorsmad_project" >
+    package="com.example.dominatorsmad_project">
 
     <application
         android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <activity android:name=".Payment" />
-        <activity android:name=".Address" />
-        <activity android:name=".delete_popup" />
-        <activity android:name=".payment_confirm" />
-        <activity android:name=".editAddress" />
-        <activity android:name=".purchaseSuccess" />
-
-
-        <activity android:name=".UserHome"/>
-        <activity android:name=".UserRegistration" />
-        <activity android:name=".AdminRegister" />
-        <activity android:name=".AdminHome" />
-
-        <activity android:name=".MainActivity"/>
-        <activity android:name=".UserLogin">
-
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-
-
-
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity android:name=".cake_pages"/> 
     </application>
 
 </manifest>
