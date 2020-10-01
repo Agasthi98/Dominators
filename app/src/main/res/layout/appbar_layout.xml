@@ -12,7 +12,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/loginBgColor"
+            android:background="@color/button"
             app:titleTextColor="@color/textColor">
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>

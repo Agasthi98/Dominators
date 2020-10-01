@@ -90,10 +90,11 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:width="45dp"
-                android:background="@drawable/button_delete_background"
+                android:background="@drawable/delete_button"
                 android:padding="15dp"
                 android:text="delete cake"
                 android:textSize="18dp" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
