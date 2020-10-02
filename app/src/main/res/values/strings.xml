@@ -46,5 +46,16 @@
     <string name="order">Place</string>
     <string name="status_bar">status_bar</string>
 
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="your_review">Your review:</string>
+    <string name="tell_people_about_your_experiance">Tell people about your experiance</string>
+    <string name="submit_review">Submit Review</string>
+    <string name="your_first_hand_experience_really_help_others_thanks">Your first-hand experience really help others.Thanks!</string>
+    <string name="todo">TODO</string>
+    <string name="name">Name:</string>
+    <string name="reviews">REVIEWS</string>
+    <string name="name_sathma">Name: Sathma</string>
+    <string name="your_review_i_absolutely_loved_the_cakes_very_delicious">Your Review : I absolutely loved the cakes.Very delicious♥️</string>
+
 
 </resources>
