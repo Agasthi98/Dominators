@@ -31,7 +31,7 @@ public class UserHome extends AppCompatActivity implements NavigationView.OnNavi
         userDrawer = findViewById(R.id.user_drawer_layout);
         userNavigation = findViewById(R.id.user_navigation_view);
         userToolBar = findViewById(R.id.toolbar);
-  //      toggle = new ActionBarDrawerToggle(this, userDrawer, R.string.open, R.string.close);
+        toggle = new ActionBarDrawerToggle(this, userDrawer, R.string.open, R.string.close);
 
         userToolBar.setTitle("Sprinkles");
         setSupportActionBar(userToolBar);

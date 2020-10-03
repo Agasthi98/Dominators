@@ -34,7 +34,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:hint="@string/cake_name"
+                android:hint="Cake_name"
                 android:inputType="text"
                 android:maxLines="1"
                 android:padding="15dp" />
@@ -44,7 +44,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:hint="@string/description"
+                android:hint="Description"
                 android:inputType="textMultiLine"
                 android:padding="15dp" />
 
@@ -53,7 +53,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:hint="@string/quantity"
+                android:hint="Quantity"
                 android:inputType="text"
                 android:maxLines="1"
                 android:padding="15dp" />
@@ -63,7 +63,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:hint="@string/price"
+                android:hint="Price"
                 android:inputType="number"
                 android:maxLines="1"
                 android:padding="15dp" />
@@ -95,7 +95,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="@string/cancel" />
+                android:text="Cancel" />
 
         </LinearLayout>
     </ScrollView>

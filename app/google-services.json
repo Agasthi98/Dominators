@@ -1,34 +1,42 @@
 {
   "project_info": {
-    "project_number": "653232990627",
-    "firebase_url": "https://dominators-mad-project-3daa7.firebaseio.com",
-    "project_id": "dominators-mad-project-3daa7",
-    "storage_bucket": "dominators-mad-project-3daa7.appspot.com"
+    "project_number": "281331745761",
+    "firebase_url": "https://cakedb-949eb.firebaseio.com",
+    "project_id": "cakedb-949eb",
+    "storage_bucket": "cakedb-949eb.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:653232990627:android:2e8c9623cd0e29c813d216",
+        "mobilesdk_app_id": "1:281331745761:android:e14f5c264972a1511ac8a0",
         "android_client_info": {
           "package_name": "com.example.dominatorsmad_project"
         }
       },
       "oauth_client": [
         {
-          "client_id": "653232990627-3iko7s5rg6omifiqr48n6icls6jsuq66.apps.googleusercontent.com",
+          "client_id": "281331745761-gigoo7ud5i1mjd31rbl8p4cbbuc0gb9p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dominatorsmad_project",
+            "certificate_hash": "81d21e1d9e24016a7d84c396a5d3b679687558bb"
+          }
+        },
+        {
+          "client_id": "281331745761-3uhe90uuvkl690amn774q95q0cce2r1c.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDA29ySYx-rOsjWoEohPy9WX9rHPkYsg58"
+          "current_key": "AIzaSyAUXRu7wIaVtWTm-uMPk8822RM7fja1C2s"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "653232990627-3iko7s5rg6omifiqr48n6icls6jsuq66.apps.googleusercontent.com",
+              "client_id": "281331745761-3uhe90uuvkl690amn774q95q0cce2r1c.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

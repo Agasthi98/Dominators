@@ -32,7 +32,8 @@ public class AdminRegister extends AppCompatActivity {
 
     private FirebaseAuth auth;
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
-    private DatabaseReference reference = database.getReference("Admin");
+    private DatabaseReference reference = database.getReference().child("Admin");
+    private String userId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +41,6 @@ public class AdminRegister extends AppCompatActivity {
         setContentView(R.layout.activity_admin_register);
         dialog = new ProgressDialog(this);
         auth = FirebaseAuth.getInstance();
-
         registerAdmin();
     }
 
@@ -61,7 +61,7 @@ public class AdminRegister extends AppCompatActivity {
                 final String shopName = adminShopName.getText().toString().trim();
                 final String adminPhone = phoneNumber.getText().toString().trim();
                 final String pass = password.getText().toString().trim();
-                String confPass = conformPassword.getText().toString().trim();
+                final String confPass = conformPassword.getText().toString().trim();
 
                 if (TextUtils.isEmpty(name)) {
                     adminName.setError("Name is required");
@@ -100,9 +100,13 @@ public class AdminRegister extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             dialog.dismiss();
-                            Admin newAdmin = new Admin(name, email, shopName, adminPhone, pass);
-                            reference.child(auth.getCurrentUser().getUid()).setValue(newAdmin);
                             Toast.makeText(getApplicationContext(), "Registration Success", Toast.LENGTH_SHORT).show();
+                            userId = auth.getCurrentUser().getUid();
+                            Admin newAdmin = new Admin(name, email, shopName, adminPhone, pass);
+                            reference.child(userId).setValue(newAdmin);
+                            startActivity(new Intent(getApplicationContext(),AdminHome.class));
+
+
                         } else {
                             dialog.dismiss();
                             Toast.makeText(getApplicationContext(), "Registration Failed", Toast.LENGTH_SHORT).show();

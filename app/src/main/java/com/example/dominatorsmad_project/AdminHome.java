@@ -33,13 +33,13 @@ public class AdminHome extends AppCompatActivity implements NavigationView.OnNav
         adminDrawer = findViewById(R.id.admin_drawer_layout);
         adminNavigation = findViewById(R.id.admin_navigation_view);
         adminToolBar = findViewById(R.id.toolbar);
-//        toggle = new ActionBarDrawerToggle(this,adminDrawer,R.string.open,R.string.close);
+       toggle = new ActionBarDrawerToggle(this,adminDrawer,R.string.open,R.string.close);
 
         //
         adminToolBar.setTitle("Sprinkles Admin");
         setSupportActionBar(adminToolBar);
         adminDrawer.addDrawerListener(toggle);
-        toggle.syncState();
+       toggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         adminNavigation.setNavigationItemSelectedListener(this);
 

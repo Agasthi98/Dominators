@@ -72,7 +72,7 @@
                 android:textColor="@color/textColorWhite"
                 android:padding="5dp"
                 android:gravity="center"
-                android:id="@+id/login_as_admin"/>
+                android:id="@+id/login_as_user"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -82,6 +82,15 @@
                 android:padding="5dp"
                 android:gravity="center"
                 android:id="@+id/create_new_account"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Create new Admin Account"
+                android:textColor="@color/textColorWhite"
+                android:padding="5dp"
+                android:gravity="center"
+                android:id="@+id/create_new_admin_account"/>
 
         </LinearLayout>
 

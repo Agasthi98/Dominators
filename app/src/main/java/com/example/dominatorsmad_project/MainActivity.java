@@ -26,9 +26,10 @@ import org.w3c.dom.Text;
 public class MainActivity extends AppCompatActivity {
 
     private TextView createNewUserAccount;
-    private TextView loginAdmin;
+    private TextView loginUser;
     private EditText loginEmail;
     private EditText loginPassword;
+    private TextView createAdminAcoount;
     private Button loginButton;
     private ProgressDialog dialog;
 
@@ -54,7 +55,8 @@ public class MainActivity extends AppCompatActivity {
         loginEmail = findViewById(R.id.login_email);
         loginPassword = findViewById(R.id.login_password);
         loginButton = findViewById(R.id.login_button);
-        loginAdmin = findViewById(R.id.login_as_admin);
+        loginUser = findViewById(R.id.login_as_user);
+        createAdminAcoount = findViewById(R.id.create_new_admin_account);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,11 +92,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        loginUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),UserLogin.class));
+            }
+        });
         createNewUserAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), UserRegistration.class));
+            }
+        });
+        createAdminAcoount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),AdminRegister.class));
             }
         });
     }
