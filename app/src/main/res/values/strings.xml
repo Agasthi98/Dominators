@@ -49,5 +49,9 @@
     <string name="reorder">Place</string>
     <string name="status_bar">status_bar</string>
     <string name="_5399_egp">_5399_egp</string>
+    <string name="my_cart">My Cart</string>
+    <string name="loading">Loading...</string>
+    <string name="total_rs">Total - Rs.</string>
+    <string name="buy_now">Buy Now</string>
 
 </resources>
