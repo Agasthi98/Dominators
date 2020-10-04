@@ -1,5 +1,6 @@
 package com.example.dominatorsmad_project;
 
+
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
@@ -15,30 +16,34 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class UserHome extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class AdminHome extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    private DrawerLayout userDrawer;
-    private NavigationView userNavigation;
-    private Toolbar userToolBar;
-    private FrameLayout userFrameLayout;
+    private DrawerLayout adminDrawer;
+    private NavigationView adminNavigation;
+    private Toolbar adminToolBar;
+    private FrameLayout adminFrameLayout;
     private ActionBarDrawerToggle toggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_home);
+        setContentView(R.layout.activity_admin_home);
 
-        userDrawer = findViewById(R.id.user_drawer_layout);
-        userNavigation = findViewById(R.id.user_navigation_view);
-        userToolBar = findViewById(R.id.toolbar);
-        toggle = new ActionBarDrawerToggle(this, userDrawer, R.string.open, R.string.close);
+        // Assign layout variables
+        adminDrawer = findViewById(R.id.admin_drawer_layout);
+        adminNavigation = findViewById(R.id.admin_navigation_view);
+        adminToolBar = findViewById(R.id.toolbar);
+       toggle = new ActionBarDrawerToggle(this,adminDrawer, R.string.open, R.string.close);
 
-        userToolBar.setTitle("Sprinkles");
-        setSupportActionBar(userToolBar);
-        userDrawer.addDrawerListener(toggle);
-        toggle.syncState();
+        //
+        adminToolBar.setTitle("Sprinkles Admin");
+        setSupportActionBar(adminToolBar);
+        adminDrawer.addDrawerListener(toggle);
+       toggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        userNavigation.setNavigationItemSelectedListener(this);
+        adminNavigation.setNavigationItemSelectedListener(this);
+
+        // Create fragment objects
 
         setFragment(new HomePage());
     }
@@ -60,7 +65,7 @@ public class UserHome extends AppCompatActivity implements NavigationView.OnNavi
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawerLayout = findViewById(R.id.user_drawer_layout);
+        DrawerLayout drawerLayout = findViewById(R.id.admin_drawer_layout);
         if(drawerLayout.isDrawerOpen(GravityCompat.END)) {
             drawerLayout.closeDrawer(GravityCompat.END);
         } else {
@@ -71,14 +76,14 @@ public class UserHome extends AppCompatActivity implements NavigationView.OnNavi
     public void displaySelectedListner(int itemId) {
         Fragment fragment = null;
         switch (itemId) {
-            case R.id.nav_user_home:
+            case R.id.nav_home:
                 fragment = new HomePage();
                 break;
-            case R.id.nav_user_account:
-//                fragment = new AdminProfile();
+            case R.id.nav_admin_account:
+                fragment = new AdminProfile();
                 break;
-            case R.id.nav_user_cart:
-                fragment = new CartItem();
+            case R.id.nav_admin_cake:
+                fragment = new AddCake();
                 break;
         }
 
@@ -89,13 +94,13 @@ public class UserHome extends AppCompatActivity implements NavigationView.OnNavi
             transaction.commit();
         }
 
-        DrawerLayout drawerLayout = findViewById(R.id.user_drawer_layout);
+        DrawerLayout drawerLayout = findViewById(R.id.admin_drawer_layout);
         drawerLayout.closeDrawer(GravityCompat.START);
     }
 
     @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        displaySelectedListner(menuItem.getItemId());
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        displaySelectedListner(item.getItemId());
         return false;
     }
 }
