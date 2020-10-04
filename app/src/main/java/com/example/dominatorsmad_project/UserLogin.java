@@ -25,7 +25,7 @@ public class UserLogin extends AppCompatActivity {
     private Button userLoginButton;
     private ProgressDialog dialog;
     private TextView adminlogin;
-
+    private String EmailAuth;
     private FirebaseAuth auth;
 
     @Override
@@ -50,6 +50,9 @@ public class UserLogin extends AppCompatActivity {
         userLoginButton = findViewById(R.id.user_login_button);
         adminlogin = findViewById(R.id.login_as_admin);
 
+         EmailAuth = userLoginEmail.getText().toString().trim();
+
+
         userLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -73,6 +76,9 @@ public class UserLogin extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             dialog.dismiss();
+
+                            Auth_User Auth=new Auth_User(EmailAuth);
+
                             Toast.makeText(getApplicationContext(), "Login Success", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(), UserHome.class));
                         } else {

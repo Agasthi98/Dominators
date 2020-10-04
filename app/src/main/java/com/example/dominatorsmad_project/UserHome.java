@@ -9,6 +9,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
@@ -75,10 +76,11 @@ public class UserHome extends AppCompatActivity implements NavigationView.OnNavi
                 fragment = new HomePage();
                 break;
             case R.id.nav_user_account:
-//                fragment = new AdminProfile();
+                          Intent a = new Intent(getApplicationContext(), user_profile.class);
+                            startActivity(a);
                 break;
             case R.id.nav_user_cart:
-   //             fragment = new CartItem();
+                fragment = new CartItem();
                 break;
         }
 
