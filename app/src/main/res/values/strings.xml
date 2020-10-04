@@ -56,6 +56,16 @@
     <string name="reviews">REVIEWS</string>
     <string name="name_sathma">Name: Sathma</string>
     <string name="your_review_i_absolutely_loved_the_cakes_very_delicious">Your Review : I absolutely loved the cakes.Very delicious♥️</string>
+    <string name="textview">TextView</string>
+    <string name="save_changes">save changes</string>
+    <string name="update_your_review">UPDATE YOUR REVIEW</string>
+    <string name="textview">TextView</string>
+    <string name="your_experiences">Your Experiences</string>
+    <string name="name">Name:</string>
+    <string name="ushiniiii">ushiniiii</string>
+    <string name="wish_to_see_others_experiences">*Wish to see others experiences?</string>
+    <string name="view">view</string>
+    <string name="get_an_idea_about_what_others_said">*Get an idea about what others said?</string>
 
 
 </resources>

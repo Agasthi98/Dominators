@@ -21,13 +21,13 @@ public class View extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view);
+ //       buttonupdate = findViewById(R.id.button);
+ //       buttondelete = findViewById(R.id.button2);
 
-//        feedback=findViewById(R.id.textViewfeedback);
-//        name=findViewById(R.id.textViewname);
-//
-//
-//        databaseReference= FirebaseDatabase.getInstance().getReference().child("FeedBack").child("User1");
-//        databaseReference.addValueEventListener(new ValueEventListener() {
+ //      feedback=findViewById(R.id.textViewfeedback);
+ //     name=findViewById(R.id.textViewname);
+ //         databaseReference= FirebaseDatabase.getInstance().getReference().child("FeedBack").child("User1");
+ //         databaseReference.addValueEventListener(new ValueEventListener() {
 //            @Override
 //            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 //                String feedbacks=dataSnapshot.child("feedback").getValue().toString();
@@ -37,10 +37,9 @@ public class View extends AppCompatActivity {
 //
 //            }
 //
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError databaseError) {
-//
-//            }
+//         @Override
+ //          public void onCancelled(@NonNull DatabaseError databaseError) {
+//    }
 //        });
 
     }
