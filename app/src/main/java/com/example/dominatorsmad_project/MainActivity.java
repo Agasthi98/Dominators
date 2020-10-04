@@ -42,11 +42,12 @@ public class MainActivity extends AppCompatActivity {
         dialog = new ProgressDialog(this);
         auth = FirebaseAuth.getInstance();
 
-//       if (auth.getCurrentUser() != null) {
-//           startActivity(new Intent(getApplicationContext(), AdminHome.class)); }
-//
-       login();
-   }
+//        if (auth.getCurrentUser() != null) {
+//            startActivity(new Intent(getApplicationContext(), AdminHome.class));
+//        }
+
+        login();
+    }
 
 
     private void login() {
