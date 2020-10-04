@@ -65,7 +65,8 @@
     <color name="followersBg">#65DCE5</color>
     <color name="followingBg">#49BEFF</color>
     <color name="grey">#E5E5E5</color>
-    <color name="bt">#320404</color>
+    <color name="tool">#FFEB3B</color>
+    <color name="wall">#24D8C0</color>
 
 
 </resources>
