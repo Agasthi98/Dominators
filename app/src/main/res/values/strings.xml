@@ -1,8 +1,7 @@
 <resources>
     <string name="app_name">Cake</string>
     <string name="PaymentHeader">Payment</string>
-    <string name="Save_Card">Save this card</string>
-    <string name="SaveCard_swtich" />
+    <string name="Save_Card">Automatically Save this card</string>
     <string name="CardNumber">Card number</string>
     <string name="CardMonth">MM</string>
     <string name="CardYear">YY</string>
@@ -11,7 +10,8 @@
     <string name="CardHeader">Add a credit/debit card</string>
     <string name="paymentSave">Done</string>
     <string name="AddressHeader">Please enter your address in English character as required</string>
-    <string name="SaveAddress">Save delivery address</string>
+    <string name="EditAddressHeader">Please enter your new address in English character as required</string>
+    <string name="SaveAddress">Save delivery address automatically save</string>
     <string name="SaveAddressBtn">Continue</string>
     <string name="Name">Customer Name</string>
     <string name="Conatctextention">+94</string>
@@ -39,19 +39,25 @@
     <string name="deletepaymentcardmessage">Are you sure want to delete this card</string>
     <string name="order_n">order_n</string>
     <string name="Deliver">Delivery Address</string>
-    <string name="marwa_eltayeb">marwa_eltayeb</string>
     <string name="user_address">user_address</string>
-    <string name="dummy_phone">dummy_phone</string>
     <string name="items_in_your_order">items_in_your_order</string>
     <string name="product_image">product_image</string>
-    <string name="samsung_galaxy_a70">samsung_galaxy_a70</string>
     <string name="item">item</string>
-    <string name="reorder">Place</string>
+    <string name="order">Place</string>
     <string name="status_bar">status_bar</string>
-    <string name="_5399_egp">_5399_egp</string>
-    <string name="my_cart">My Cart</string>
-    <string name="loading">Loading...</string>
-    <string name="total_rs">Total - Rs.</string>
-    <string name="buy_now">Buy Now</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="your_review">Your review:</string>
+    <string name="tell_people_about_your_experiance">Tell people about your experiance</string>
+    <string name="submit_review">Submit Review</string>
+    <string name="your_first_hand_experience_really_help_others_thanks">Your first-hand experience really help others.Thanks!</string>
+    <string name="todo">TODO</string>
+    <string name="name">Name:</string>
+    <string name="reviews">REVIEWS</string>
+    <string name="name_sathma">Name: Sathma</string>
+    <string name="your_review_i_absolutely_loved_the_cakes_very_delicious">Your Review : I absolutely loved the cakes.Very delicious♥️</string>
+
 
 </resources>

@@ -54,7 +54,7 @@ public class Payment extends AppCompatActivity {
                             if (!SecurityCode.isEmpty()){
                                 PaymentInsert();
                                 Toast.makeText(Payment.this, "Data inserted", Toast.LENGTH_SHORT).show();
-                                Intent i = new Intent(getApplicationContext(), payment_confirm.class);
+                                Intent i = new Intent(getApplicationContext(), Summary.class);
                                 i.putExtra("CardNo",CardNumber);
                                 startActivity(i);
                             }

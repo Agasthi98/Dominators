@@ -21,9 +21,9 @@ public class purchaseSuccess extends AppCompatActivity {
         purchaseSuccess.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                Intent i = new Intent(getApplicationContext(), cake_pages.class);
-                startActivity(i);
+//
+//                Intent i = new Intent(getApplicationContext(), cake_pages.class);
+//                startActivity(i);
             }
         });
 

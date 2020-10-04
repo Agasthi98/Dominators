@@ -1,5 +1,6 @@
 package com.example.dominatorsmad_project;
 
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -65,15 +66,11 @@ public class editAddress extends AppCompatActivity {
                 EditCity.setText(City);
                 EditCont.setText(Phn);
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {}
         });
     }
     private void updateAddress(){
-
-
-
 
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Address").child("User2");
         String BuyerName=EditName.getText().toString();
@@ -95,8 +92,7 @@ public class editAddress extends AppCompatActivity {
                         updateValues.put("street3",Street_two);
 
                         databaseReference.updateChildren(updateValues);
-
-                        Intent intent=new Intent(getApplicationContext(),payment_confirm.class);
+                        Intent intent=new Intent(getApplicationContext(),Summary.class);
                         intent.putExtra("CardNo",CardNo);
                         startActivity(intent);
 
@@ -111,12 +107,8 @@ public class editAddress extends AppCompatActivity {
             }
             else
                 Toast.makeText(getApplicationContext(), "Contact number required", Toast.LENGTH_SHORT).show();
-
         }
         else
             Toast.makeText(getApplicationContext(), "name required", Toast.LENGTH_SHORT).show();
-
-
-
     }
 }

@@ -5,8 +5,8 @@ import android.app.AlertDialog;
 import android.view.LayoutInflater;
 
 public class Loading {
-private Activity activity;
-private AlertDialog dialog;
+    private Activity activity;
+    private AlertDialog dialog;
 
 
     Loading(Activity myactivity){
@@ -16,7 +16,7 @@ private AlertDialog dialog;
         AlertDialog.Builder builder=new AlertDialog.Builder(activity);
 
         LayoutInflater intflater = activity.getLayoutInflater();
-        builder.setView(intflater.inflate(R.layout.loading,null));
+        builder.setView(intflater.inflate(R.layout.activity_loading,null));
         builder.setCancelable(false);
 
         dialog=builder.create();

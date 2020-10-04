@@ -1,8 +1,9 @@
 package com.example.dominatorsmad_project;
 
+
 public class PaymentHandle {
 
-private String HolderName,CardNo,MM,CVV;
+    private String HolderName,CardNo,MM,CVV;
 
     public PaymentHandle(String cardNo,String holderName, String CVV, String MM ) {
 

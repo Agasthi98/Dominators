@@ -1,9 +1,10 @@
 package com.example.dominatorsmad_project;
 
+
 public class AddressHandle {
 
 
-   private String Names,phonenumCountry, phoneNumber, Street1, Street3, Cities;
+    private String Names,phonenumCountry, phoneNumber, Street1, Street3, Cities;
 
     public AddressHandle(String names, String phoneNumber, String street1, String street3, String cities) {
         Names = names;
