@@ -19,7 +19,7 @@ public class View extends AppCompatActivity {
 
     TextView name,feedback;
     DatabaseReference databaseReference;
-Button buttondelete,buttonupdate;
+    Button buttondelete,buttonupdate;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
