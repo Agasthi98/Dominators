@@ -9,15 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UserRegistration"></activity>
-        <activity android:name=".UserLogin" />
-        <activity android:name=".UserHome" />
-        <activity android:name=".AdminRegister" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".AdminHome" />
-        <activity android:name=".View" />
-        <activity android:name=".feedback_update" />
-        <activity android:name=".feedback">
+        <activity android:name=".delete_popup"/>
+        <activity android:name=".user_profile"/>
+
+        <activity android:name=".purchaseSuccess"/>
+
+        <activity android:name=".Summary"/>
+
+        <activity android:name=".Payment"/>
+        <activity android:name=".editAddress"/>
+
+        <activity android:name=".Address">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
