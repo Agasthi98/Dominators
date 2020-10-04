@@ -1,7 +1,5 @@
 package com.example.dominatorsmad_project;
 
-import android.widget.EditText;
-
 public class User {
 
     private String name;

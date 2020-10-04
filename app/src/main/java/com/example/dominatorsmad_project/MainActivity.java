@@ -1,11 +1,5 @@
 package com.example.dominatorsmad_project;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-
-import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,12 +10,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-
-import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,12 +37,11 @@ public class MainActivity extends AppCompatActivity {
         dialog = new ProgressDialog(this);
         auth = FirebaseAuth.getInstance();
 
-//        if (auth.getCurrentUser() != null) {
-//            startActivity(new Intent(getApplicationContext(), AdminHome.class));
-//        }
-
-        login();
-    }
+//       if (auth.getCurrentUser() != null) {
+//           startActivity(new Intent(getApplicationContext(), AdminHome.class)); }
+//
+       login();
+   }
 
 
     private void login() {
