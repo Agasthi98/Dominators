@@ -17,7 +17,7 @@ import java.util.Map;
 public class feedback_update extends AppCompatActivity {
 
     EditText txtname,txtfeedbakc;
-    Button submit,btnview;
+    Button submit,btnview,btnUpdate;
     DatabaseReference databaseReference;
 
     @Override
@@ -30,6 +30,8 @@ public class feedback_update extends AppCompatActivity {
         submit=findViewById(R.id.btnUpdate);
 
         btnview=findViewById(R.id.btnview);
+
+
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
