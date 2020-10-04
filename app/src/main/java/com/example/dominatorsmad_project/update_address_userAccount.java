@@ -1,44 +1,37 @@
 package com.example.dominatorsmad_project;
 
-
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+        import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageButton;
-import android.widget.TextView;
-import android.widget.Toast;
+        import android.content.Intent;
+        import android.os.Bundle;
+        import android.view.View;
+        import android.widget.Button;
+        import android.widget.EditText;
+        import android.widget.ImageButton;
+        import android.widget.TextView;
+        import android.widget.Toast;
 
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+        import com.google.firebase.auth.FirebaseAuth;
+        import com.google.firebase.database.DataSnapshot;
+        import com.google.firebase.database.DatabaseError;
+        import com.google.firebase.database.DatabaseReference;
+        import com.google.firebase.database.FirebaseDatabase;
+        import com.google.firebase.database.ValueEventListener;
 
-import java.util.HashMap;
-import java.util.Map;
+        import java.util.HashMap;
+        import java.util.Map;
 
-public class editAddress extends AppCompatActivity {
+public class update_address_userAccount extends AppCompatActivity {
 
 
     EditText EditName,EditCont,EditStreet,EditEditStreet2,EditCity;
     Button updateAddress;
     String CardNo;
-<<<<<<< HEAD
     private FirebaseAuth auth;
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
     private DatabaseReference databaseReferenceAddress;
     private DatabaseReference databaseReference_Address_Update;
-=======
-    private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Address");
-    private FirebaseAuth auth;
-
->>>>>>> origin/master
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,32 +42,19 @@ public class editAddress extends AppCompatActivity {
         EditStreet=(EditText) findViewById(R.id.txteditStreet);
         EditEditStreet2=(EditText) findViewById(R.id.txteditStreet2);
         EditCity=(EditText) findViewById(R.id.txtEditCity);
-<<<<<<< HEAD
         auth = FirebaseAuth.getInstance();
         databaseReferenceAddress=database.getReference().child("Addresss").child(auth.getUid());
-=======
-
-        databaseReference = databaseReference.child(auth.getCurrentUser().getUid());
->>>>>>> origin/master
 
         updateAddress=(Button)findViewById(R.id.btnupdateAddress);
-        updateAddress.setOnClickListener(new View.OnClickListener() {
+        updateAddress.setOnClickListener(new android.view.View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
                 updateAddress();
             }
         });
 
-<<<<<<< HEAD
         databaseReferenceAddress.addValueEventListener(new ValueEventListener() {
-=======
-        databaseReference.addValueEventListener(new ValueEventListener() {
->>>>>>> origin/master
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
@@ -100,11 +80,7 @@ public class editAddress extends AppCompatActivity {
 
 
 
-<<<<<<< HEAD
         databaseReference_Address_Update=database.getReference().child("Addresss").child(auth.getUid());
-=======
-        databaseReference = FirebaseDatabase.getInstance().getReference().child("Address").child("User2");
->>>>>>> origin/master
         String BuyerName=EditName.getText().toString();
         String PhoneNumber=EditCont.getText().toString();
         String Street_one=EditStreet.getText().toString();
@@ -123,13 +99,9 @@ public class editAddress extends AppCompatActivity {
                         updateValues.put("street1",Street_one);
                         updateValues.put("street3",Street_two);
 
-<<<<<<< HEAD
                         databaseReferenceAddress.updateChildren(updateValues);
-=======
-                        databaseReference.updateChildren(updateValues);
->>>>>>> origin/master
 
-                        Intent intent=new Intent(getApplicationContext(),Summary.class);
+                        Intent intent=new Intent(getApplicationContext(),user_profile.class);
                         intent.putExtra("CardNo",CardNo);
                         startActivity(intent);
 

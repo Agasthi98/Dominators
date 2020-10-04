@@ -1,11 +1,17 @@
 package com.example.dominatorsmad_project;
 
+<<<<<<< HEAD
 import android.content.Intent;
+=======
+>>>>>>> origin/master
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+<<<<<<< HEAD
 import android.widget.Button;
+=======
+>>>>>>> origin/master
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -44,7 +50,11 @@ public class CartItem extends Fragment {
     private int databaseItemQuantityForRemove;
     private int totalSum = 0;
     private int value;
+<<<<<<< HEAD
     private Button buy;
+=======
+
+>>>>>>> origin/master
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_cart, container, false);
@@ -55,6 +65,7 @@ public class CartItem extends Fragment {
         cartRecycleView.setHasFixedSize(true);
         cartRecycleView.setLayoutManager(new LinearLayoutManager(getContext()));
 
+<<<<<<< HEAD
         buy=view.findViewById(R.id.btnbuy);
 
         buy.setOnClickListener(new View.OnClickListener() {
@@ -66,6 +77,8 @@ public class CartItem extends Fragment {
         });
 
 
+=======
+>>>>>>> origin/master
         options = new FirebaseRecyclerOptions.Builder<Cart>().setQuery(reference.child(auth.getCurrentUser().getUid()), Cart.class).build();
         adapter = new FirebaseRecyclerAdapter<Cart, CartItemViewHolder>(options) {
             @Override
@@ -152,7 +165,10 @@ public class CartItem extends Fragment {
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
         });
     }
 }

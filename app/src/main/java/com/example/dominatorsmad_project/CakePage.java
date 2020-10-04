@@ -28,7 +28,7 @@ public class CakePage extends Fragment {
     private TextView cakePrice;
     private TextView cakeQuantity;
     private TextView cakeDescription;
-
+    public String Name,CardNo;
     private Button addToCartButton;
     private Button buyNowButton;
     private Bundle bundle;
@@ -37,9 +37,29 @@ public class CakePage extends Fragment {
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
     private DatabaseReference allItems = database.getReference().child("All_Cakes");
     private DatabaseReference cartReference = database.getReference().child("Cart");
+<<<<<<< HEAD
    private DatabaseReference databaseReferenceAddress;
     private DatabaseReference databaseReference_Payment;
 private String name,carNo;
+=======
+     private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Address");
+
+    private DatabaseReference databaseReferencecard = FirebaseDatabase.getInstance().getReference().child("Payment");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/master
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_cake_page, container, false);
@@ -55,6 +75,9 @@ private String name,carNo;
 
         auth = FirebaseAuth.getInstance();
         cartReference = cartReference.child(auth.getCurrentUser().getUid());
+        databaseReference = cartReference.child(auth.getCurrentUser().getUid());
+        databaseReferencecard = cartReference.child(auth.getCurrentUser().getUid());
+
 
 
 
@@ -62,6 +85,7 @@ private String name,carNo;
 
         displayItemDetails();
         addToCart();
+<<<<<<< HEAD
 
 
 
@@ -99,6 +123,9 @@ private String name,carNo;
 
 
 
+=======
+        purchase();
+>>>>>>> origin/master
         return view;
     }
 
@@ -201,8 +228,103 @@ private  void check_details(){
 
         }
     }
+<<<<<<< HEAD
 
 }
 
 
+=======
+    private void purchase(){
+
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                try{
+
+                    Name = dataSnapshot.child("names").getValue().toString();
+                }
+                catch (Exception e1){
+
+                    Name="Empty";
+                }
+
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                CardNo="Empty";
+            }
+        });
+
+        databaseReferencecard.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                try {
+                    CardNo = dataSnapshot.child("cardNo").getValue().toString();
+                }
+                catch (Exception e ){
+                    CardNo="Empty";
+                }
+
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                CardNo="Empty";
+            }
+        });
+
+        buyNowButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                if (Name.equals("Empty")){
+
+                    Toast.makeText(getContext(), "Address page", Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(getContext(), Address.class);
+                    startActivity(i);
+
+                }
+                else{
+                    if (CardNo.equals("Empty")){
+                        Toast.makeText(getContext(), "Payment page", Toast.LENGTH_SHORT).show();
+                        Intent i = new Intent(getContext(), Payment.class);
+                        startActivity(i);
+                    }
+                    else{
+                        Toast.makeText(getContext(), "Confirm page", Toast.LENGTH_SHORT).show();
+                        Intent i = new Intent(getContext(), Summary.class);
+                        i.putExtra("CardNo",CardNo);
+                        startActivity(i);
+
+                    }
+                }
+
+
+
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+>>>>>>> origin/master
 }

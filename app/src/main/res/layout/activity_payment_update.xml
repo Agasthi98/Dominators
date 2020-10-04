@@ -11,11 +11,8 @@
         android:layout_width="409dp"
         android:layout_height="54dp"
         android:hint="test"
-        android:text="@string/CardHeader"
-<<<<<<< HEAD
+        android:text="Update your card details"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-=======
->>>>>>> origin/master
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,32 +46,23 @@
 
     <TextView
         android:id="@+id/textView8"
-<<<<<<< HEAD
-        android:layout_width="246dp"
-        android:layout_height="44dp"
+        android:layout_width="254dp"
+        android:layout_height="39dp"
         android:text="@string/Save_Card"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.096"
-=======
-        android:layout_width="189dp"
-        android:layout_height="33dp"
-        android:text="@string/Save_Card"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
->>>>>>> origin/master
+        app:layout_constraintHorizontal_bias="0.072"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.8" />
+        app:layout_constraintVertical_bias="0.806" />
 
     <Button
         android:id="@+id/btnaddtresspage"
         android:layout_width="219dp"
         android:layout_height="47dp"
-        android:text="@string/paymentSave"
         android:background="@drawable/button_background"
+        android:text="Update"
         android:textColor="@color/colorWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

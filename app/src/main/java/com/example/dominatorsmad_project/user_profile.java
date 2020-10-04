@@ -1,5 +1,6 @@
 package com.example.dominatorsmad_project;
 
+<<<<<<< HEAD
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -34,10 +35,19 @@ public class user_profile extends AppCompatActivity {
     ImageButton editaddresss,paymentDelete;
 
     @SuppressLint("WrongViewCast")
+=======
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+
+public class user_profile extends AppCompatActivity {
+
+>>>>>>> origin/master
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
+<<<<<<< HEAD
 
 
         auth = FirebaseAuth.getInstance();
@@ -155,4 +165,7 @@ public class user_profile extends AppCompatActivity {
     }
 
 
+=======
+    }
+>>>>>>> origin/master
 }

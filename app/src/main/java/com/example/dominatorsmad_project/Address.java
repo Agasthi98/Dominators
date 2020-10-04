@@ -1,6 +1,9 @@
 package com.example.dominatorsmad_project;
 
+<<<<<<< HEAD
 import androidx.annotation.NonNull;
+=======
+>>>>>>> origin/master
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -12,6 +15,7 @@ import android.widget.Switch;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+<<<<<<< HEAD
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -29,6 +33,19 @@ public class Address extends AppCompatActivity {
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
     private DatabaseReference databaseReferenceAddress;
     private DatabaseReference databaseReference_Payment;
+=======
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+public class Address extends AppCompatActivity {
+
+
+    private FirebaseAuth auth;
+    private EditText Name,phn,phn2,Street,Street2,City;
+    private Button Save;
+    private String phoneNumbers;
+    private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Address");
+>>>>>>> origin/master
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +61,11 @@ public class Address extends AppCompatActivity {
         City = findViewById(R.id.txtEditCity);
         Save = findViewById(R.id.btnupdateAddress);
 
+<<<<<<< HEAD
+=======
+        databaseReference = databaseReference.child(auth.getCurrentUser().getUid());
+
+>>>>>>> origin/master
 
         Save.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,6 +101,7 @@ public class Address extends AppCompatActivity {
 
     }
 
+<<<<<<< HEAD
     private void insertAddress() {
         auth = FirebaseAuth.getInstance();
         databaseReferenceAddress = database.getReference().child("Addresss").child(auth.getUid());
@@ -98,11 +121,33 @@ public class Address extends AppCompatActivity {
     }
 
 
+=======
+    private void insertAddress(){
+
+        String BuyerName=Name.getText().toString();
+        String PhoneNumber=phn.getText().toString();
+        String Street_one=Street.getText().toString();
+        String Street_two=Street2.getText().toString();
+        String Cit=City.getText().toString();
+
+
+        AddressHandle AddressHD = new AddressHandle(BuyerName, PhoneNumber, Street_one, Street_two,Cit);
+        databaseReference.setValue(AddressHD);
+
+        Intent intent=new Intent(getApplicationContext(),Payment.class);
+        startActivity(intent);
+
+        Toast.makeText(Address.this, "Datainserted", Toast.LENGTH_SHORT).show();
+>>>>>>> origin/master
 
     }
 
 
+<<<<<<< HEAD
 
 
 
 
+=======
+}
+>>>>>>> origin/master

@@ -10,6 +10,7 @@ public class purchaseSuccess extends AppCompatActivity {
 
     private Button purchaseSuccess;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,8 +22,13 @@ public class purchaseSuccess extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+
                 Intent i = new Intent(getApplicationContext(), user_profile.class);
                startActivity(i);
+
+//                Intent i = new Intent(getApplicationContext(), cake_pages.class);
+//                startActivity(i);
+
             }
         });
 
