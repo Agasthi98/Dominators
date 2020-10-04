@@ -24,7 +24,8 @@
         android:text="Success"
         android:textAlignment="center"
         android:textColor="@color/Brown"
-        android:textSize="36sp" />
+        android:textSize="36sp"
+        android:gravity="center_horizontal" />
 
 
     <TextView
@@ -35,7 +36,8 @@
         android:text="You have succesfully ordred item"
         android:layout_marginTop="40dp"
         android:textColor="@color/black"
-        android:textSize="25sp" />
+        android:textSize="25sp"
+        android:gravity="center_horizontal" />
 
 
     <ImageView

@@ -1,6 +1,6 @@
 package com.example.dominatorsmad_project;
 
-
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -11,15 +11,24 @@ import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class Address extends AppCompatActivity {
 
-    private EditText Name,phn,phn2,Street,Street2,City;
+    private EditText Name, phn, phn2, Street, Street2, City;
     private Button Save;
     private String phoneNumbers;
-    private DatabaseReference databaseReference;
+    private String carNo, name;
+
+    private FirebaseAuth auth;
+    private FirebaseDatabase database = FirebaseDatabase.getInstance();
+    private DatabaseReference databaseReferenceAddress;
+    private DatabaseReference databaseReference_Payment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +43,6 @@ public class Address extends AppCompatActivity {
         Street2 = findViewById(R.id.txteditStreet2);
         City = findViewById(R.id.txtEditCity);
         Save = findViewById(R.id.btnupdateAddress);
-
-        databaseReference = FirebaseDatabase.getInstance().getReference().child("Address");
 
 
         Save.setOnClickListener(new View.OnClickListener() {
@@ -72,24 +79,30 @@ public class Address extends AppCompatActivity {
 
     }
 
-    private void insertAddress(){
+    private void insertAddress() {
+        auth = FirebaseAuth.getInstance();
+        databaseReferenceAddress = database.getReference().child("Addresss").child(auth.getUid());
 
-        String BuyerName=Name.getText().toString();
-        String PhoneNumber=phn.getText().toString();
-        String Street_one=Street.getText().toString();
-        String Street_two=Street2.getText().toString();
-        String Cit=City.getText().toString();
+        String BuyerName = Name.getText().toString();
+        String PhoneNumber = phn.getText().toString();
+        String Street_one = Street.getText().toString();
+        String Street_two = Street2.getText().toString();
+        String Cit = City.getText().toString();
 
+        AddressHandle AddressHD = new AddressHandle(BuyerName, PhoneNumber, Street_one, Street_two, Cit);
+        databaseReferenceAddress.setValue(AddressHD);
 
-        AddressHandle AddressHD = new AddressHandle(BuyerName, PhoneNumber, Street_one, Street_two,Cit);
-        databaseReference.child("User2").setValue(AddressHD);
-
-        Intent intent=new Intent(getApplicationContext(),Payment.class);
-        startActivity(intent);
-
-        Toast.makeText(Address.this, "Datainserted", Toast.LENGTH_SHORT).show();
+        Intent i = new Intent(getApplicationContext(), Payment.class);
+        startActivity(i);
 
     }
 
 
-}
+
+    }
+
+
+
+
+
+

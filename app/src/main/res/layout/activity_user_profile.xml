@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <RelativeLayout
         android:id="@+id/rellay1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="218dp"
         android:background="@drawable/grad"
         android:paddingBottom="20dp">
 
@@ -31,36 +32,23 @@
         </RelativeLayout>
 
         <TextView
-            android:id="@+id/tv_name"
-            android:layout_width="wrap_content"
+            android:id="@+id/txtheaderName"
+            android:layout_width="186dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/imgUser"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="15sp"
+            android:layout_marginTop="-3dp"
             android:fontFamily="sans-serif-light"
-            android:text="Agasthi Sankalana"
             android:textColor="@color/white"
             android:textSize="32sp" />
 
-
-        <TextView
-            android:id="@+id/tv_address"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_name"
-            android:layout_centerHorizontal="true"
-            android:fontFamily="sans-serif"
-            android:text="User"
-            android:textAllCaps="true"
-            android:textColor="@color/background"
-            android:textSize="14sp" />
 
         <ImageButton
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="15dp"
             android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
             android:adjustViewBounds="true"
             android:scaleType="centerInside"
             android:src="@drawable/ic_settings" />
@@ -94,18 +82,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
-                    android:text="10"
+                    android:text="Profile"
                     android:textColor="@color/white"
                     android:textSize="25sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:text="Orders"
-                    android:textAllCaps="true"
-                    android:textColor="@color/white"
-                    android:textSize="13sp" />
 
             </LinearLayout>
 
@@ -124,95 +103,203 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
             android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:text="Email"
+                android:textColor="@color/headings"
+                android:textSize="13sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Email"
-                    android:textColor="@color/headings"
-                    android:textSize="13sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:text="Admin@gmail.com"
-                    android:textColor="#000000"
-                    android:textSize="18sp" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="15dp"
-                    android:background="@color/grey" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/Email"
+                android:layout_width="321dp"
                 android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
                 android:layout_marginTop="15dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Phone"
-                    android:textColor="@color/headings"
-                    android:textSize="13sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:text="Agasthi sankalana"
-                    android:textColor="#000000"
-                    android:textSize="18sp" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="15dp"
-                    android:background="@color/grey" />
-
-            </LinearLayout>
+                android:background="@color/grey" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="5dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Contact number"
+                    android:text="Name"
                     android:textColor="@color/headings"
                     android:textSize="13sp" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/name"
+                    android:layout_width="319dp"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
-                    android:text="0771234569"
                     android:textColor="#000000"
                     android:textSize="18sp" />
-
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginTop="15dp"
                     android:background="@color/grey" />
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Contact number"
+                        android:textColor="@color/headings"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/contact"
+                        android:layout_width="319dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/grey" />
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:id="@+id/txtaddress"
+                            android:layout_width="328dp"
+                            android:textColor="@color/headings"
+                            android:layout_height="44dp"
+                            android:text="Address" />
+
+
+                        <ImageButton
+                            android:id="@+id/editaddresss"
+                            android:layout_width="60dp"
+                            android:layout_height="35dp"
+                            app:srcCompat="@mipmap/ic_editaddress_round" />
+
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/txtname"
+                        android:layout_width="match_parent"
+                        android:layout_height="26dp" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/grey" />
+
+                    <TextView
+                        android:id="@+id/txtstreet1"
+                        android:layout_width="match_parent"
+                        android:layout_height="22dp" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/grey" />
+
+                    <TextView
+                        android:id="@+id/street2"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/grey" />
+
+                    <TextView
+                        android:id="@+id/City"
+                        android:layout_width="match_parent"
+                        android:layout_height="27dp" />
+
+                    <TextView
+                        android:id="@+id/addresscontact"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/grey" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:id="@+id/textView14"
+                            android:layout_width="328dp"
+                            android:layout_height="match_parent"
+                            android:text="Card details"
+                            android:textColor="@color/headings" />
+
+
+                        <ImageButton
+                            android:id="@+id/paymentDelete"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            app:srcCompat="@mipmap/ic_deletepayment_round" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtcard_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="26dp"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+
+
+
+
             </LinearLayout>
+
+
+
+
 
 
         </LinearLayout>
