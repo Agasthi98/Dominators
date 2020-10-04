@@ -37,7 +37,7 @@ public class CakePage extends Fragment {
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
     private DatabaseReference allItems = database.getReference().child("All_Cakes");
     private DatabaseReference cartReference = database.getReference().child("Cart");
-     private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Address");
+    private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Address");
 
     private DatabaseReference databaseReferencecard = FirebaseDatabase.getInstance().getReference().child("Payment");
 
@@ -72,12 +72,12 @@ public class CakePage extends Fragment {
         databaseReference = cartReference.child(auth.getCurrentUser().getUid());
         databaseReferencecard = cartReference.child(auth.getCurrentUser().getUid());
 
-//
-//        displayItemDetails();
-//
-//        addToCart();
-//        purchase();
-//        return view;
+
+        displayItemDetails();
+
+        addToCart();
+        purchase();
+        return view;
     }
 
     private void addToCart() {
@@ -91,12 +91,12 @@ public class CakePage extends Fragment {
                 String itemId = cartReference.push().getKey();
                 int itemQuantity = 1;
                 int totalPrice = Integer.parseInt(itemPrice);
-//
+
 //                Cart newCartItem = new Cart(itemId, itemName, itemPrice, itemImage,itemDescription, itemQuantity, totalPrice);
 //                cartReference.child(itemId).setValue(newCartItem);
 //                Toast.makeText(getContext(), "Item Added to Cart", Toast.LENGTH_SHORT).show();
-//            }
-//        });
+            }
+        });
     }
 
     private void displayItemDetails() {
@@ -150,29 +150,29 @@ public class CakePage extends Fragment {
         buyNowButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//
-//
-//                if (Name.equals("Empty")){
-//
-//                    Toast.makeText(getContext(), "Address page", Toast.LENGTH_SHORT).show();
-//                    Intent i = new Intent(getContext(), Address.class);
-//                    startActivity(i);
-//
-//                }
-//                else{
-//                    if (CardNo.equals("Empty")){
-//                        Toast.makeText(getContext(), "Payment page", Toast.LENGTH_SHORT).show();
-//                        Intent i = new Intent(getContext(), Payment.class);
-//                        startActivity(i);
-//                    }
-//                    else{
-//                        Toast.makeText(getContext(), "Confirm page", Toast.LENGTH_SHORT).show();
-//                        Intent i = new Intent(getContext(), Summary.class);
-//                        i.putExtra("CardNo",CardNo);
-//                        startActivity(i);
-//
-//                    }
-//                }
+
+
+                if (Name.equals("Empty")){
+
+                    Toast.makeText(getContext(), "Address page", Toast.LENGTH_SHORT).show();
+                  //  Intent i = new Intent(getContext(), Address.class);
+                 //   startActivity(i);
+
+                }
+                else{
+                    if (CardNo.equals("Empty")){
+                        Toast.makeText(getContext(), "Payment page", Toast.LENGTH_SHORT).show();
+                 //       Intent i = new Intent(getContext(), Payment.class);
+                //       startActivity(i);
+                    }
+                    else{
+                        Toast.makeText(getContext(), "Confirm page", Toast.LENGTH_SHORT).show();
+                  //      Intent i = new Intent(getContext(), Summary.class);
+                   //     i.putExtra("CardNo",CardNo);
+                   //     startActivity(i);
+
+                    }
+                }
 
 
 

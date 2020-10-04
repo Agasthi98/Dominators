@@ -79,9 +79,9 @@ public class AdminHome extends AppCompatActivity implements NavigationView.OnNav
             case R.id.nav_home:
                 fragment = new HomePage();
                 break;
-//            case R.id.nav_admin_account:
-//                fragment = new AdminProfile();
-//                break;
+            case R.id.nav_admin_account:
+                fragment = new AdminProfile();
+                break;
             case R.id.nav_admin_cake:
                 fragment = new AddCake();
                 break;
