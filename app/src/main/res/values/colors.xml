@@ -67,6 +67,9 @@
     <color name="grey">#E5E5E5</color>
     <color name="tool">#FFEB3B</color>
     <color name="wall">#24D8C0</color>
+    <color name="back">#3F51B5</color>
+    <color name="front">#FFEB3B</color>
+    <color name="roof">#24D8C0</color>
 
 
 </resources>
