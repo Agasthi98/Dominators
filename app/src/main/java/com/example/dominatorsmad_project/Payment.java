@@ -1,5 +1,6 @@
 package com.example.dominatorsmad_project;
 
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -10,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.braintreepayments.cardform.view.CardForm;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -20,6 +22,10 @@ public class Payment extends AppCompatActivity {
     private Button done;
     private DatabaseReference databaseReference;
     private EditText CardNo,MM,YY,CVV;
+
+    private FirebaseAuth auth;
+    private FirebaseDatabase database = FirebaseDatabase.getInstance();
+    private DatabaseReference databaseReference_Payment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +44,14 @@ public class Payment extends AppCompatActivity {
         CardNo = cardForm.getCardEditText();
         MM = cardForm.getExpirationDateEditText();
         HolderName = findViewById(R.id.txtEditname);
+
+
+        auth = FirebaseAuth.getInstance();
+        databaseReference_Payment=database.getReference().child("Payment").child(auth.getUid());
+
+
+
+
 
 
         done.setOnClickListener(new View.OnClickListener() {
@@ -81,16 +95,15 @@ public class Payment extends AppCompatActivity {
 
     }
     private void PaymentInsert(){
-        databaseReference = FirebaseDatabase.getInstance().getReference().child("Payment");
+
         String NameOfHolder = HolderName.getText().toString();
         String CardNumber = CardNo.getText().toString();
         String Month = MM.getText().toString();
         String SecurityCode = CVV.getText().toString();
 
         PaymentHandle payments = new PaymentHandle(CardNumber, NameOfHolder, SecurityCode, Month);
-        databaseReference.child("User1").setValue(payments);
+        databaseReference_Payment.setValue(payments);
 
 
     }
 }
-
